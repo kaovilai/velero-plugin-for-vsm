@@ -27,14 +27,14 @@ import (
 func main() {
 	veleroplugin.NewServer().
 		BindFlags(pflag.CommandLine).
-		RegisterBackupItemAction("velero.io/vsm-volumesnapshotcontent-backupper", newVolumeSnapContentBackupItemAction).
+		RegisterBackupItemActionV2("velero.io/vsm-volumesnapshotcontent-backupper", newVolumeSnapContentBackupItemActionV2).
 		RegisterBackupItemAction("velero.io/vsm-volumesnapshotbackup-backupper", newVolumeSnapshotBackupBackupItemAction).
 		RegisterDeleteItemAction("velero.io/csi-volumesnapshotbackup-delete", newVolumeSnapshotBackupDeleteItemAction).
 		Serve()
 }
 
-func newVolumeSnapContentBackupItemAction(logger logrus.FieldLogger) (interface{}, error) {
-	return &backup.VolumeSnapshotContentBackupItemAction{Log: logger}, nil
+func newVolumeSnapContentBackupItemActionV2(logger logrus.FieldLogger) (interface{}, error) {
+	return &backup.VolumeSnapshotContentBackupItemActionV2{Log: logger}, nil
 }
 
 func newVolumeSnapshotBackupBackupItemAction(logger logrus.FieldLogger) (interface{}, error) {

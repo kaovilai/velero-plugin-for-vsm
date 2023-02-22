@@ -46,7 +46,6 @@ import (
 	datamoverv1alpha1 "github.com/konveyor/volume-snapshot-mover/api/v1alpha1"
 	velerov1api "github.com/vmware-tanzu/velero/pkg/apis/velero/v1"
 	"github.com/vmware-tanzu/velero/pkg/label"
-	"github.com/vmware-tanzu/velero/pkg/restic"
 )
 
 const (
@@ -111,27 +110,27 @@ func Contains(slice []string, key string) bool {
 	return false
 }
 
-func IsPVCBackedUpByRestic(pvcNamespace, pvcName string, podClient corev1client.PodsGetter, defaultVolumesToRestic bool) (bool, error) {
-	pods, err := GetPodsUsingPVC(pvcNamespace, pvcName, podClient)
-	if err != nil {
-		return false, errors.WithStack(err)
-	}
-
-	for _, p := range pods {
-		resticVols := restic.GetPodVolumesUsingRestic(&p, defaultVolumesToRestic)
-		if len(resticVols) > 0 {
-			volName, err := GetPodVolumeNameForPVC(p, pvcName)
-			if err != nil {
-				return false, err
-			}
-			if Contains(resticVols, volName) {
-				return true, nil
-			}
-		}
-	}
-
-	return false, nil
-}
+//func IsPVCBackedUpByRestic(pvcNamespace, pvcName string, podClient corev1client.PodsGetter, defaultVolumesToRestic bool) (bool, error) {
+//	pods, err := GetPodsUsingPVC(pvcNamespace, pvcName, podClient)
+//	if err != nil {
+//		return false, errors.WithStack(err)
+//	}
+//
+//	for _, p := range pods {
+//		resticVols := restic.GetPodVolumesUsingRestic(&p, defaultVolumesToRestic)
+//		if len(resticVols) > 0 {
+//			volName, err := GetPodVolumeNameForPVC(p, pvcName)
+//			if err != nil {
+//				return false, err
+//			}
+//			if Contains(resticVols, volName) {
+//				return true, nil
+//			}
+//		}
+//	}
+//
+//	return false, nil
+//}
 
 // GetVolumeSnapshotClassForStorageClass returns a VolumeSnapshotClass for the supplied volume provisioner/ driver name.
 func GetVolumeSnapshotClassForStorageClass(provisioner string, snapshotClient snapshotter.SnapshotV1Interface) (*snapshotv1api.VolumeSnapshotClass, error) {
