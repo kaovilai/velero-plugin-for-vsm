@@ -78,4 +78,7 @@ require (
 
 replace github.com/gogo/protobuf => github.com/gogo/protobuf v1.3.2
 
-replace github.com/vmware-tanzu/velero => github.com/shubham-pampattiwar/velero v1.7.0-rc.1.0.20230228224351-86ce1c3b6100
+// OADP-DEMO:
+replace github.com/vmware-tanzu/velero => ./parent_modules/velero/
+
+replace github.com/konveyor/volume-snapshot-mover => ./parent_modules/volume-snapshot-mover/

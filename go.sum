@@ -616,8 +616,6 @@ github.com/klauspost/cpuid/v2 v2.0.12/go.mod h1:g2LTdtYhdyuGPqyWyv7qRAmj1WBqxuOb
 github.com/klauspost/pgzip v1.2.5/go.mod h1:Ch1tH69qFZu15pkjo5kYi6mth2Zzwzt50oCQKQE9RUs=
 github.com/konsorten/go-windows-terminal-sequences v1.0.1/go.mod h1:T0+1ngSBFLxvqU3pZ+m/2kptfBszLMUkC4ZK/EgS/cQ=
 github.com/konsorten/go-windows-terminal-sequences v1.0.3/go.mod h1:T0+1ngSBFLxvqU3pZ+m/2kptfBszLMUkC4ZK/EgS/cQ=
-github.com/konveyor/volume-snapshot-mover v0.0.0-20230220192239-6286f8f192c1 h1:VFjo26CnI3aRUmQga86tMLeY9T5FYogU7MlAz3svxxQ=
-github.com/konveyor/volume-snapshot-mover v0.0.0-20230220192239-6286f8f192c1/go.mod h1:wdv9aBmDxa5FZD0FPADJC2ziVKg/rYCzDKJUwVmFCCE=
 github.com/kopia/htmluibuild v0.0.0-20220326183613-bbc499ed4dad/go.mod h1:eWer4rx9P8lJo2eKc+Q7AZ1dE1x1hJNdkbDFPzMu1Hw=
 github.com/kopia/kopia v0.10.7 h1:6s0ZIZW3Ge2ozzefddASy7CIUadp/5tF9yCDKQfAKKI=
 github.com/kopia/kopia v0.10.7/go.mod h1:0d9THPD+jwomPcXvPbCdmLyX6phQVP7AqcCcDEajfNA=
@@ -903,8 +901,6 @@ github.com/sean-/seed v0.0.0-20170313163322-e2103e2c3529/go.mod h1:DxrIzT+xaE7yg
 github.com/sergi/go-diff v1.0.0/go.mod h1:0CfEIISq7TuYL3j771MWULgwwjU+GofnZX9QAmXWZgo=
 github.com/sergi/go-diff v1.1.0/go.mod h1:STckp+ISIX8hZLjrqAeVduY0gWCT9IjLuqbuNXdaHfM=
 github.com/shirou/gopsutil/v3 v3.21.12/go.mod h1:BToYZVTlSVlfazpDDYFnsVZLaoRG+g8ufT6fPQLdJzA=
-github.com/shubham-pampattiwar/velero v1.7.0-rc.1.0.20230228224351-86ce1c3b6100 h1:jilLkXKifWvuVZterD3wa+RdWnKBch3t3jQWzjxPiB0=
-github.com/shubham-pampattiwar/velero v1.7.0-rc.1.0.20230228224351-86ce1c3b6100/go.mod h1:CV8tLTWG/Mwz1/B73YMWrY1vWcy9RJdr7IWAGGK4F5E=
 github.com/shurcooL/component v0.0.0-20170202220835-f88ec8f54cc4/go.mod h1:XhFIlyj5a1fBNx5aJTbKoIq0mNaPvOagO+HjB3EtxrY=
 github.com/shurcooL/events v0.0.0-20181021180414-410e4ca65f48/go.mod h1:5u70Mqkb5O5cxEA8nxTsgrgLehJeAw6Oc4Ab1c/P1HM=
 github.com/shurcooL/github_flavored_markdown v0.0.0-20181002035957-2122de532470/go.mod h1:2dOwnU2uBioM+SGy2aZoq1f/Sd1l9OkAeAUvjSyvgU0=
